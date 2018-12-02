@@ -23,9 +23,8 @@ public class TestController implements TestApi {
         this.testService = testService;
     }
 
-    public Object[] getTests() {
-        Object[] a = {"dsad"};
-        return a;
+    public List<TestResponse> getTests() {
+        return testMapper.toResponseList(testService.findAll());
     }
 
 }
