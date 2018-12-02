@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 
 import lombok.Getter;
 
+@Getter
 @Entity
 public class Test {
 
-    @Getter
     private int id;
 
     private String name;

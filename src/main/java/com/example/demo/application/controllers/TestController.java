@@ -2,6 +2,7 @@ package com.example.demo.application.controllers;
 
 import com.example.demo.application.controllers.Api.TestApi;
 import com.example.demo.application.dtos.TestMapper;
+import com.example.demo.application.dtos.response.TestResponse;
 import com.example.demo.application.dtos.service.TestDto;
 import com.example.demo.application.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,23 +24,7 @@ public class TestController implements TestApi {
     }
 
     public Object[] getTests() {
-        TestDto testDto = new TestDto() {
-            @Override
-            public int getId() {
-                return 3;
-            }
-
-            @Override
-            public String getName() {
-                return "my first test";
-            }
-
-            @Override
-            public String getDescription() {
-                return "a boaring test";
-            }
-        };
-        Object[] a = {testMapper.toResponse(testDto)};
+        Object[] a = {"dsad"};
         return a;
     }
 
