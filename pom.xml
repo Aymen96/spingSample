@@ -93,11 +93,11 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.swagger.version}</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency>-->
 		<dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
