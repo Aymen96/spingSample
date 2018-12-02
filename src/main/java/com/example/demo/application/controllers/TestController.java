@@ -7,6 +7,7 @@ import com.example.demo.application.dtos.service.TestDto;
 import com.example.demo.application.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.swing.text.TabExpander;
@@ -25,6 +26,10 @@ public class TestController implements TestApi {
 
     public List<TestResponse> getTests() {
         return testMapper.toResponseList(testService.findAll());
+    }
+
+    public TestResponse getTest(@PathVariable int id) {
+        return testMapper.toResponse(testService.findTestById(id));
     }
 
 }

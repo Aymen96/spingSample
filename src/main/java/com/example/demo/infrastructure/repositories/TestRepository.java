@@ -10,4 +10,6 @@ import java.util.List;
 public interface TestRepository extends JpaRepository<Test, Integer> {
 
     List<TestDto> findAllDtoBy();
+
+    TestDto findAllDtoById(int id);
 }

@@ -5,6 +5,7 @@ import com.example.demo.application.dtos.response.TestResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public interface TestApi {
     @GetMapping
     @ApiOperation(value = "Finds all tests")
     List<TestResponse> getTests();
+
+    @GetMapping("/{id}")
+    @ApiOperation(value = "find test by id")
+    TestResponse getTest(@PathVariable int id);
 }

@@ -19,4 +19,8 @@ public class TestService {
     public List<TestDto> findAll() {
         return this.testRepository.findAllDtoBy();
     }
+
+    public TestDto findTestById(int id) {
+       return this.testRepository.findAllDtoById(id);
+    }
 }
